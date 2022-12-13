@@ -6,28 +6,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/minify.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Barber</title>
 </head>
 
 <body>
-    <h1 class="visually-hidden">Simple-starter</h1>
+    <h1 class="visually-hidden">Barber-Page</h1>
     <header class="header">
         <div class="container header__container">
-
+            <div class="header__left">
+                <a href=""><img class="header__logo-image" src="./images/logo__img.svg" alt="header__logo-img"
+                        width="143" height="83"></a>
+                <nav class="header__navbar">
+                    <ul class="header__list">
+                        <li class="header__lists"><a class="header__links" href="#">Home</a></li>
+                        <li class="header__lists"><a class="header__links" href="#">History</a></li>
+                        <li class="header__lists"><a class="header__links" href="#">Service</a></li>
+                        <li class="header__lists"><a class="header__links" href="#">Gallary</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right">
+                <img class="header__account-img" src="./images/profile__img.svg" alt="profile__image" width="42"
+                    height="42">
+                <img class="header__message-img" src="./images/notification__img.svg" alt="notification__image"
+                    width="42" height="42">
+                <a class="header__main-link" href="#">Appointment</a>
+            </div>
         </div>
     </header>
     <main>
         <section class="hero">
             <div class="container hero__container">
-
+                <div class="hero__left">
+                    <h2 class="hero__title"><span>Hairstyle</span> Reflects The Personality Inside You</h2>
+                    <p class="hero__text">It is a long established fact that a reader will be distracted by the readable
+                        content of a page when looking at.</p>
+                    <a class="hero__link" href="#">Get Started</a>
+                </div>
+            </div>
+        </section>
+        <section class="history">
+            <div class="container history__container">
+                <img src="./images/master__barbers.png" alt="master__barbers" width="694" height="698">
+                <div class="history__right">
+                    <h2 class="history__title">Our <span>History</span></h2>
+                    <p class="history__text">It is a long established fact that a reader will be distracted by the
+                        readable content of a page when looking at.</p>
+                    <p class="history__text">It is a long established fact that a reader will be distracted by the
+                        readable content of a page when looking at.</p>
+                    <a class="history__link" href="#">Learn more</a>
+                </div>
+            </div>
+        </section>
+        <section class="service">
+            <div class="container service__container">
+                <h2 class="service__title">Services We <span>Provide</span></h2>
+                <div class="service__bottom">
+                    <div class="service__left">
+                        <img class="service__left-img" src="./images/scissors.svg" alt="scissors" width="83"
+                            height="106">
+                        <h2 class="service__left-title">Hair Cut</h2>
+                        <p class="service__left-text">long established fact that a reacted by the readable content of
+                            hen looking at.</p>
+                    </div>
+                    <div class="service__middle">
+                        <img class="service__middle-img" src="./images/beard__cut.svg" alt="beard__cut" width="83"
+                            height="106">
+                        <h2 class="service__middle-title">Beard Cut</h2>
+                        <p class="service__middle-text">long established fact that a reacted by the readable content of
+                            hen looking at.</p>
+                    </div>
+                    <div class="service__right">
+                        <img class="service__right-img" src="./images/facial__pack.svg" alt="facial__pack" width="83"
+                            height="106">
+                        <h2 class="service__right-title">Facial Pack</h2>
+                        <p class="service__right-text">long established fact that a reacted by the readable content of
+                            hen looking at.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">   
+            <div class="container gallery__container">
+                <h2 class="gallery__title">Our <span>Gallery</span></h2>
+                <div class="gallery__bottom">
+                    <img class="gallery__images" src="./images/shaving__beard.png" alt="shaving__beard" width="325"
+                        height="325">
+                    <img class="gallery__images" src="./images/shaving__hair.png" alt="shaving__hair" width="325"
+                        height="325">
+                    <img class="gallery__images" src="./images/shaving__back-hair.png" alt="shaving__back-hair"
+                        width="325" height="325">
+                    <img class="gallery__images" src="./images/shaving__left-beard.png" alt="shaving__left-beard"
+                        width="325" height="325">
+                    <img class="gallery__images" src="./images/shaving__short-beard.png" alt="shaving__short-beard"
+                        width="325" height="325">
+                    <img class="gallery__images" src="./images/shaving__from-bottom-to-top-the-beard.png"
+                        alt="shaving__from-bottom-to-top-the-beard" width="325" height="325">
+                </div>
+                <a class="gallery__link" href="#">View All</a>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="container footer__container">
-
+            <a href="#"><img class="footer__logo-img" src="./images/logo__img.svg" alt="scissors" width="163" height="103"></a>
+            <p class="footer__text">It is a long established fact that a reader will be distracted by the readable</p>
+            <div class="footer__icon">
+                <img class="footer__icons" src="./images/facebook.svg" alt="facebook" width="47" height="47">
+                <img class="footer__icons" src="./images/twitter.svg" alt="twitter" width="47" height="47">
+                <img class="footer__icons" src="./images/google.svg" alt="google" width="47" height="47">
+            </div>
+            <hr class="footer__hr">
         </div>
     </footer>
     <script src="./js/script.js"></script>

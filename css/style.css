@@ -1,0 +1,736 @@
+@font-face {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        url('../fonts/catamaran-v17-latin-regular.woff2') format('woff2'),
+        url('../fonts/catamaran-v17-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src:
+        url('../fonts/catamaran-v17-latin-500.woff2') format('woff2'),
+        url('../fonts/catamaran-v17-latin-500.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        url('../fonts/catamaran-v17-latin-700.woff2') format('woff2'),
+        url('../fonts/catamaran-v17-latin-700.woff') format('woff');
+}
+
+::selection {
+    color: var(--white);
+    background-color: var(--dark-sky-blue);
+}
+
+:root {
+    --white: #FFFFFF;
+    --sky-blue: #99BAED;
+    --nearly-white: #FAFBFF;
+    --dark-sky-blue: #A3C1EF;
+    --dark-blue: #163561;
+    --second-dark-blue: #153461;
+    --nearly-yellow: #FBB400;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+input,
+input:focus,
+button,
+button:focus,
+textarea {
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Catamaran';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: var(--white);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1270px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.header {
+    background-color: var(--white);
+    margin-bottom: 200px;
+    position: relative;
+}
+
+.header::after {
+    position: absolute;
+    content: '';
+    width: 283px;
+    height: 737px;
+    top: 750px;
+    left: 0;
+    background-image: url('../images/vector__left.svg');
+    background-repeat: no-repeat;
+}
+
+.header::before {
+    position: absolute;
+    content: '';
+    width: 283px;
+    height: 737px;
+    top: 750px;
+    right: 0;
+    background-image: url('../images/vector__right.svg');
+    background-repeat: no-repeat;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 74px;
+}
+
+.header__logo-image {
+    vertical-align: middle;
+    transition: 240ms ease all;
+    transform: translateY(5px);
+}
+
+.header__logo-image:active {
+    opacity: 0.4;
+    transition: 240ms ease all;
+    transform: translateX(-);
+}
+
+.header__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__links {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133.6%;
+    color: var(--dark-blue);
+    transition: 240ms ease all;
+    padding-top: 67px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 8px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.header__links:hover {
+    background-color: var(--dark-sky-blue);
+    color: var(--white);
+    text-align: center;
+
+}
+
+.header__right {
+    transform: translateY(33px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 72px;
+}
+
+.header__main-link {
+    border: 1px solid var(--dark-sky-blue);
+    width: 158px;
+    height: 66px;
+    background-color: var(--sky-blue);
+    color: var(--white);
+    border-radius: 20px;
+    transition: 240ms ease all;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 66px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.header__main-link:active {
+    transition: 240ms ease all;
+    border-radius: 20px;
+    box-shadow: rgba(153, 186, 237, 0.5) 0px 10px 36px 0px, rgba(153, 186, 237, 0.5) 0px 0px 0px 1px;
+}
+
+.hero {
+    background-color: var(--white);
+    margin-bottom: 226px;
+}
+
+.hero__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.hero__container::before {
+    position: absolute;
+    content: '';
+    width: 834px;
+    height: 554px;
+    top: -140px;
+    right: -110px;
+    background-image: url('../images/barbers.png');
+    background-repeat: no-repeat;
+}
+
+.hero__left {
+    transform: translateY(-50px);
+}
+
+.hero__title {
+    width: 526px;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 133.6%;
+    margin-bottom: 29px;
+}
+
+span {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    color: var(--nearly-yellow);
+}
+
+.hero__text {
+    width: 426px;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150.6%;
+    letter-spacing: 0.03em;
+    color: var(--second-dark-blue);
+    opacity: 0.65;
+    margin-bottom: 97px;
+}
+
+.hero__link {
+    border: 1px solid var(--dark-sky-blue);
+    width: 158px;
+    height: 66px;
+    background-color: var(--sky-blue);
+    color: var(--white);
+    border-radius: 20px;
+    transition: 240ms ease all;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 66px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.hero__link:active {
+    transition: 240ms ease all;
+    border-radius: 20px;
+    box-shadow: rgba(153, 186, 237, 0.5) 0px 10px 36px 0px, rgba(153, 186, 237, 0.5) 0px 0px 0px 1px;
+}
+
+.history {
+    background-color: var(--white);
+    margin-bottom: 236px;
+}
+
+.history__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history__title {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 150.6%;
+    letter-spacing: 0.03em;
+    color: var(--dark-blue);
+    margin-bottom: 80px;
+}
+
+.history__text {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150.6%;
+    letter-spacing: 0.03em;
+    color: var(--second-dark-blue);
+    opacity: 0.65;
+    width: 456px;
+    margin-bottom: 48px;
+}
+
+.history__link {
+    border: 1px solid var(--dark-sky-blue);
+    width: 158px;
+    height: 66px;
+    background-color: var(--sky-blue);
+    color: var(--white);
+    border-radius: 20px;
+    transition: 240ms ease all;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 66px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.history__link:active {
+    transition: 240ms ease all;
+    border-radius: 20px;
+    box-shadow: rgba(153, 186, 237, 0.5) 0px 10px 36px 0px, rgba(153, 186, 237, 0.5) 0px 0px 0px 1px;
+}
+
+.service {
+    background-color: var(--white);
+    position: relative;
+    margin-bottom: 332px;
+}
+
+.service::after {
+    content: '';
+    width: 283px;
+    height: 1267px;
+    top: 150px;
+    left: 0;
+    position: absolute;
+    background-image: url('../images/double__left-vector.svg');
+    background-repeat: no-repeat;
+}
+
+.service::before {
+    content: '';
+    width: 283px;
+    height: 1267px;
+    top: 150px;
+    right: 0;
+    position: absolute;
+    background-image: url('../images/double__right-vector.svg');
+    background-repeat: no-repeat;
+}
+
+.service__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 41px;
+}
+
+.service__title {
+    text-align: center;
+    width: 387px;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    letter-spacing: 0.03em;
+    color: var(--dark-blue);
+}
+
+.service__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 49px;
+}
+
+.service__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 301px;
+    height: 403px;
+    background-color: var(--nearly-white);
+    border-radius: 29px;
+    margin-bottom: 50px;
+    box-shadow: 0px 3px 0px #99BAED;
+    transition: 0.5s;
+    color: var(--second-dark-blue);
+    cursor: pointer;
+}
+
+.service__left:hover {
+    background-color: var(--sky-blue);
+    color: var(--nearly-white);
+    transition: 0.5s;
+}
+
+.service__left-img {
+    margin-top: 25px;
+    margin-bottom: 59px;
+}
+
+.service__left-title {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 116.6%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+}
+
+.service__left-text {
+    width: 269px;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150.6%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    opacity: 0.65;
+}
+
+.service__middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 301px;
+    height: 403px;
+    background-color: var(--nearly-white);
+    border-radius: 29px;
+    margin-bottom: 50px;
+    box-shadow: 0px 3px 0px #99BAED;
+    transition: 0.5s;
+    color: var(--second-dark-blue);
+    cursor: pointer;
+}
+
+.service__middle:hover {
+    background-color: var(--sky-blue);
+    color: var(--nearly-white);
+    transition: 0.5s;
+}
+
+.service__middle-img {
+    margin-top: 25px;
+    margin-bottom: 59px;
+}
+
+.service__middle-title {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 116.6%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+}
+
+.service__middle-text {
+    width: 269px;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150.6%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    opacity: 0.65;
+}
+
+.service__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 301px;
+    height: 403px;
+    background-color: var(--nearly-white);
+    border-radius: 29px;
+    margin-bottom: 50px;
+    box-shadow: 0px 3px 0px #99BAED;
+    transition: 0.5s;
+    color: var(--second-dark-blue);
+    cursor: pointer;
+}
+
+.service__right:hover {
+    background-color: var(--sky-blue);
+    color: var(--nearly-white);
+    transition: 0.5s;
+}
+
+.service__right-img {
+    margin-top: 25px;
+    margin-bottom: 59px;
+}
+
+.service__right-title {
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 116.6%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+}
+
+.service__right-text {
+    width: 269px;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150.6%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    opacity: 0.65;
+}
+
+.gallery {
+    background-color: var(--white);
+    margin-bottom: 171px;
+}
+
+.gallery__container {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #163561;
+    margin-bottom: 110px;
+}
+
+.gallery__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 37px;
+    margin-bottom: 77px;
+}
+
+.gallery__images {
+    transition: 0.5s all;
+    background-color: rgba(20, 39, 74, 0.5);
+}
+
+.gallery__images:hover {
+    transition: 0.5s all;
+
+}
+
+.gallery__link {
+    border: 1px solid var(--dark-sky-blue);
+    width: 168px;
+    height: 66px;
+    background-color: var(--sky-blue);
+    color: var(--white);
+    border-radius: 20px;
+    transition: 240ms ease all;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 66px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.gallery__link:active {
+    transition: 240ms ease all;
+    border-radius: 20px;
+    box-shadow: rgba(153, 186, 237, 0.5) 0px 10px 36px 0px, rgba(153, 186, 237, 0.5) 0px 0px 0px 1px;
+}
+
+.footer {
+    background-color: var(--white);
+    position: relative;
+}
+
+.footer::after {
+    content: '';
+    width: 297px;
+    height: 424px;
+    top: 100px;
+    left: 0;
+    position: absolute;
+    background-image: url('../images/vector__left-bottom.svg');
+    background-repeat: no-repeat;
+}
+
+.footer::before {
+    content: '';
+    width: 297px;
+    height: 424px;
+    top: 100px;
+    right: 0;
+    position: absolute;
+    background-image: url('../images/vector__right-bottom.svg');
+    background-repeat: no-repeat;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__logo-img {
+    margin-bottom: 37px;
+    transition: 240ms ease all;
+}
+
+.footer__logo-img:active {
+    transition: 240ms ease all;
+    opacity: 0.3;
+}
+
+.footer__text {
+    width: 406px;
+    margin-bottom: 47px;
+    font-family: 'Catamaran';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150.6%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--second-dark-blue);
+    opacity: 0.65;
+}
+
+.footer__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 47px;
+}
+
+.footer__icons {
+    transition: 240ms ease all;
+    cursor: pointer;
+}
+
+.footer__icons:active {
+    transition: 240ms ease all;
+    opacity: 0.3;
+}
+
+.footer__hr {
+    width: 1060px;
+    height: 1px;
+    background-color: var(--sky-blue);
+    border: none;
+}
